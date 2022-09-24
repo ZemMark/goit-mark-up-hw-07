@@ -31,6 +31,7 @@ html {
   --card-gap: 30px;
   --overlay-bgc: rgba(47, 48, 58, 0.4);
   --before-features-bgc: #F5F4FA;
+  --gray-icons-social: #afb1b8;
 }
 
 body {
@@ -224,6 +225,8 @@ h6 {
   text-decoration: none;
 
 }
+
+
 .footer .footer-logo {
   display: block;
   margin-bottom: 20px;
@@ -421,7 +424,7 @@ ul.nav-links.list {
 
 div.card-content{
   padding-top: 30px;
-  padding-bottom: 30px;
+  
 }
 
 .team .card-job {
@@ -747,10 +750,7 @@ footer{
   padding-top: 12px;
   padding-bottom: 40px;
 }
-.social-contacts .link{
-  /* content: ""; */
-  
-}
+
 /* .social-contacts .heading{
   display: block;
   
@@ -767,7 +767,7 @@ footer{
   background-position: center;
 }
 
-
+/* ТУТ НЕПРАВИЛЬНИЙ ФУТЕР */
 .social-link.inst{
   background-image: url("../images/instagram\ 2.svg");
 }
@@ -785,10 +785,18 @@ footer{
 }
 
 .set-container{
-  /* margin-right: 0; */
-  max-width: 231px;
-  padding-right: 0;
+  margin: 0;
+  padding: 0;
+  max-width: 210px;
 }
+
+.left-conrainer{
+  margin-right: auto;
+  padding-left: 70px;
+  margin-top: 12px;
+  margin-bottom: 60px;
+}
+
 .heading{
   padding-bottom: 20px;
   text-transform: uppercase;
@@ -797,4 +805,112 @@ footer{
   line-height: 16px;
   letter-spacing: 0.03em;
   color: var(--address-link-color-footer);
+}
+/* КІНЕЦЬ СЕКЦІЇ НЕПРАИЛЬНОГО ФУТЕРА */
+
+
+
+.team-socials > li+li{
+  padding-left: 10px;
+  
+}
+
+
+.team-socials{
+  display: flex;
+  padding-left: 32px;
+  padding-bottom: 30px;
+  padding-top: 16px;
+}
+.team-socials .icon-instagram{
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.social-button:hover .icon-instagram{
+  fill: #fff;
+}
+.social-button {
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.social-button:hover{
+  background-color: var(--accent-color);
+}
+.social-button:hover .icon-twitter{
+  /* background-color: var(--accent-color); */
+  fill:rgba(255, 255, 255, 1);
+}
+.icon-twitter{
+  width: 20px;
+  height: 20px;
+  fill: var(--gray-icons-social);
+}
+.icon-facebook{
+  fill: var(--gray-icons-social);
+  width: 20px;
+  height: 20px;
+  
+}
+.social-button:hover .icon-facebook{
+  fill: #fff;
+}
+.icon-linkedin{
+  width: 20px;
+  height: 20px;
+  fill: var(--gray-icons-social);
+}
+.social-button:hover .icon-linkedin{
+  fill: #fff;
+}
+
+/* 
+inst fill="#afb1b8" style="fill:var(--color1, #afb1b8)"
+fill="#afb1b8" style="fill:var(--color1, #afb1b8)
+*/
+.footer-socials{
+  display: flex;
+
+}
+
+.footer-button{
+  
+  border: none;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  background-color: #FFFFFF1A;
+  cursor: pointer;
+}
+.icon{
+  width: 20px;
+  height: 20px;
+  fill: #fff;
+}
+.footer-button:hover{
+  background-color: var(--accent-color);
+}
+.footer-socials > li+li{
+  padding-left: 10px;
+}
+
+
+.mini-icon{
+  width: 16px;
+  height: 12px;
+  fill: #757575;
+  margin-right: 10px;
+}
+.contact.link:hover .mini-icon{
+  fill: var(--accent-color);
 }
