@@ -904,3 +904,34 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   width: 12px;
   height: 16px;
 }
+
+.clients{
+  display: flex;
+  justify-content: center;
+}
+
+.client{
+  display: flex;
+  justify-content: center;
+
+  width: 170px;
+  height: 92px;
+
+  fill: #AFB1B8;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+}
+.client:hover,
+.client:focus,
+.select:active{
+  fill:var(--accent-color);
+  border-color: var(--accent-color);
+}
+.clients>li:not(:last-child){
+  margin-right: 30px;
+}
+.client-image{
+  color: currentColor;
+  width: 170px;
+  height: 120px;
+}
