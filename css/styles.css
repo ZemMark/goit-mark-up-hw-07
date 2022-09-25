@@ -33,7 +33,9 @@ html {
   --before-features-bgc: #F5F4FA;
   --gray-icons-social: #afb1b8;
 }
-
+a{
+  cursor: pointer;
+}
 body {
   color: var(--title-color);
   background-color: #ffffff;
@@ -268,7 +270,8 @@ ul.nav-contacts.list>li+li {
   line-height: 1.17;
   font-size: 14px;
   letter-spacing: 0.02em;
-  /* outline: 2px solid teal; */
+  display: flex;
+  align-items: center
 }
 
 .contact:hover,
@@ -335,12 +338,14 @@ ul.nav-links.list {
 .hero {
   text-align: center;
   /* outline: 5px solid red; */
-  padding-top: 200px;
-  padding-bottom: 200px;
+
   background-repeat: no-repeat;
   background-size: cover;
   background-image: linear-gradient(to top, var(--overlay-bgc), var(--overlay-bgc)), url("../images/overlay.jpg");
-
+  max-width: 1600px;
+  height: 600px;
+  margin: 0 auto;
+  padding: 200px 0;
 }
 
 /* заголовки блоку "переваги" головної сторінки  */
@@ -424,7 +429,7 @@ ul.nav-links.list {
 }
 
 div.card-content{
-  padding-top: 30px;
+  padding: 30px;
   
 }
 
@@ -459,9 +464,7 @@ div.card-content{
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.portfolio a {
-  color: var(--title-color);
-}
+
 
 /* margin-top утиліта */
 /* .list>.margin{
@@ -501,6 +504,13 @@ div.card-content{
 /* редагування стилю тексту на сторінці портфоліо */
 .portfolio-link {
   font-size: 18px;
+  color: var(--title-color);
+  display: block;
+}
+.portfolio-link:hover,
+.portfolio-link:focus{
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+
 }
 
 .portfolio p {
@@ -571,23 +581,23 @@ address {
   height: 120px;
   background-color: var(--before-features-bgc);
   border-radius: 4px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 70px;
 }
 .features .weather-radar::before{
   
-  background-image: url(../images/weather-radar.svg);
+  background-image: url(../images/features/antenna.svg);
 }
 .features .clock::before{
-  background-image: url(../images/clock.svg);
+  background-image: url(../images/features/clock.svg);
 }
 .features .laptop::before{
-  background-image: url(../images/lap-top.svg);
+  background-image: url(../images/features/diagram.svg);
 }
 .features .spaceman::before{
-  background-image: url(../images/sapceman.svg);
+  background-image: url(../images/features/astronaut.svg);
 }
 
 
@@ -679,9 +689,7 @@ ul.list .item-worker:not(:last-child) {
   margin-top: var(--card-gap);
   
 }
-.card-set .item:hover{
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 
 /* ul.portfolio>.item:not(:last-child){
   margin-right: 30px;
@@ -794,20 +802,16 @@ footer{
   max-width: 210px;
 }
 
-.left-conrainer{
+.right-conrainer{
   margin-right: auto;
-  padding-left: 70px;
-  margin-top: 12px;
-  margin-bottom: 60px;
+  margin-left: 70px;
 }
 
 .heading{
   padding-bottom: 20px;
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 14px;
   line-height: 16px;
-  letter-spacing: 0.03em;
   color: var(--address-link-color-footer);
 }
 /* КІНЕЦЬ СЕКЦІЇ НЕПРАИЛЬНОГО ФУТЕРА */
@@ -822,79 +826,60 @@ footer{
 
 .team-socials{
   display: flex;
-  padding-left: 32px;
-  padding-bottom: 30px;
-  padding-top: 16px;
+  justify-content: center;
+  align-items: center;
+  margin-top:16px;
 }
-.team-socials .icon-instagram{
-  width: 20px;
-  height: 20px;
-  fill: #afb1b8;
-}
-.social-button:hover .icon-instagram{
-  fill: #fff;
-}
+
 .social-button {
   border: none;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  color: #fff;
-  background-color: #FFFFFF;
-  cursor: pointer;
+  color: var(--gray-icons-social);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+.icon-team{
+  width: 20px;
+  height: 20px;
+  fill: currentColor
+}
+
 .social-button:hover{
   background-color: var(--accent-color);
+  color:#fff;
 }
-.social-button:hover .icon-twitter{
-  /* background-color: var(--accent-color); */
-  fill:rgba(255, 255, 255, 1);
-}
-.icon-twitter{
-  width: 20px;
-  height: 20px;
-  fill: var(--gray-icons-social);
-}
-.icon-facebook{
-  fill: var(--gray-icons-social);
-  width: 20px;
-  height: 20px;
-  
-}
-.social-button:hover .icon-facebook{
-  fill: #fff;
-}
-.icon-linkedin{
-  width: 20px;
-  height: 20px;
-  fill: var(--gray-icons-social);
-}
-.social-button:hover .icon-linkedin{
-  fill: #fff;
-}
+
 
 /* 
 inst fill="#afb1b8" style="fill:var(--color1, #afb1b8)"
 fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 */
+
+.multi-block{
+  display: flex;
+  align-items: baseline;
+}
+
 .footer-socials{
   display: flex;
-
+  
 }
 
 .footer-button{
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border: none;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  margin: 0;
-  padding: 0;
-  color: #fff;
   background-color: #FFFFFF1A;
-  cursor: pointer;
 }
 .icon{
   width: 20px;
@@ -912,9 +897,10 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 .mini-icon{
   width: 16px;
   height: 12px;
-  fill: #757575;
+  fill: currentColor;
   margin-right: 10px;
 }
-.contact.link:hover .mini-icon{
-  fill: var(--accent-color);
+.phone {
+  width: 12px;
+  height: 16px;
 }
