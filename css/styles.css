@@ -275,7 +275,8 @@ ul.nav-contacts.list>li+li {
 }
 
 .contact:hover,
-.contact:focus {
+.contact:focus,
+.contact:active{
   color: var(--accent-color);
 }
 
@@ -310,7 +311,8 @@ ul.nav-links.list {
 
 
 .nav-links .link:hover,
-.link:focus {
+.nav-links .link:focus,
+.nav-links .link:active{
   color: var(--accent-color);
 }
 
@@ -374,7 +376,8 @@ ul.nav-links.list {
 }
 
 .map:hover,
-.map:focus {
+.map:focus,
+.map:active{
   color: var(--accent-color);
 }
 
@@ -396,7 +399,9 @@ ul.nav-links.list {
 }
 
 .address-links .contact:hover,
-.contact:focus {
+.address-links .contact:focus,
+.address-links .contact:active{
+
   color: var(--accent-color);
 
 }
@@ -508,7 +513,8 @@ div.card-content{
   display: block;
 }
 .portfolio-link:hover,
-.portfolio-link:focus{
+.portfolio-link:focus,
+.portfolio-link:active{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 
 }
@@ -792,7 +798,9 @@ footer{
 .social-link.in{
   background-image: url(../images/linkedin\ 1.svg);
 }
-.social-link:hover{
+.social-link:hover,
+.social-link:focus,
+.social-link:active{
   background-color: var(--accent-color);
 }
 
@@ -849,7 +857,9 @@ footer{
   fill: currentColor
 }
 
-.social-button:hover{
+.social-button:hover,
+.social-button:focus,
+.social-button:active{
   background-color: var(--accent-color);
   color:#fff;
 }
@@ -886,7 +896,9 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   height: 20px;
   fill: #fff;
 }
-.footer-button:hover{
+.footer-button:hover,
+.footer-button:focus,
+.footer-button:active{
   background-color: var(--accent-color);
 }
 .footer-socials > li+li{
@@ -900,7 +912,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   fill: currentColor;
   margin-right: 10px;
 }
-.phone {
+.mini-icon.phone {
   width: 12px;
   height: 16px;
 }
