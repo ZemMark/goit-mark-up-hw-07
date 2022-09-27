@@ -32,11 +32,15 @@ html {
   --overlay-bgc: rgba(47, 48, 58, 0.4);
   --before-features-bgc: #F5F4FA;
   --gray-icons-social: #afb1b8;
+  --portfolio-overlay-color: rgba(33, 150, 243, 0.9);
+  --work-overlay-color: rgba(47, 48, 58, 0.8);
 }
 a{
   cursor: pointer;
 }
 body {
+  
+
   color: var(--title-color);
   background-color: #ffffff;
   font-family: Roboto, sans-serif;
@@ -125,7 +129,33 @@ button{
   background-color: var(--accent-color);
   color: rgba(255, 255, 255, 1);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-  border-radius: 4px;;
+  border-radius: 4px;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  animation-name: changeBgColor;
+  animation-duration: 700ms;
+  animation-iteration-count: 1;
+  animation-fill-mode: forward;
+}
+@keyframes changeBgColor{
+
+  0% {
+    background-color: palevioletred;
+    
+  }
+  25%{
+    background-color: violet;
+  }
+  50%{
+    background-color: palegreen;
+  }
+  75%{
+    background-color: paleturquoise;
+  }
+  100%{
+    background-color: palegoldenrod;
+  }
+
 }
 
 /* кнопка "замовити послугу" */
@@ -278,6 +308,7 @@ ul.nav-contacts.list>li+li {
 .contact:focus,
 .contact:active{
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*-ПОСИЛАННЯ в хедері 
@@ -298,12 +329,12 @@ ul.nav-contacts.list>li+li {
 
 }
 
-.nav-links.list>.item.item:not(:last-child) {
+
+.nav-links .item:not(:last-child) {
   margin-right: 50px;
 
 }
-
-ul.nav-links.list {
+.nav-links.list {
   padding-bottom: 0px;
   margin-right: auto;
 }
@@ -314,10 +345,19 @@ ul.nav-links.list {
 .nav-links .link:focus,
 .nav-links .link:active{
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-links .link.current {
+.nav-links .current {
   color: var(--accent-color);
+  
+  
+  
+}
+.nav-links::after{
+  content: "";
+  border-bottom: 4px solid var(--accent-color);
+  border-radius: 2px;
 }
 
 /* стилізація блоку герой */
@@ -379,6 +419,7 @@ ul.nav-links.list {
 .map:focus,
 .map:active{
   color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -401,7 +442,7 @@ ul.nav-links.list {
 .address-links .contact:hover,
 .address-links .contact:focus,
 .address-links .contact:active{
-
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   color: var(--accent-color);
 
 }
@@ -516,7 +557,7 @@ div.card-content{
 .portfolio-link:focus,
 .portfolio-link:active{
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .portfolio p {
@@ -802,6 +843,7 @@ footer{
 .social-link:focus,
 .social-link:active{
   background-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .set-container{
@@ -862,6 +904,7 @@ footer{
 .social-button:active{
   background-color: var(--accent-color);
   color:#fff;
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -900,6 +943,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 .footer-button:focus,
 .footer-button:active{
   background-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-socials > li+li{
   padding-left: 10px;
@@ -938,6 +982,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 .select:active{
   fill:var(--accent-color);
   border-color: var(--accent-color);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .clients>li:not(:last-child){
   margin-right: 30px;
@@ -946,4 +991,118 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   color: currentColor;
   width: 170px;
   height: 120px;
+}
+.thumb{
+  position: relative;
+  overflow: hidden;
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: var(--portfolio-overlay-color);
+
+  transform: translateY(100%);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio-link:hover .overlay{
+  transform: translateY(0);
+  transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.portfolio .overlay-text{
+  color: #FFFFFF;
+  line-height: 1.55;
+  font-size: 18px;
+  letter-spacing: 0.03em;
+  width: 322px;
+  height: 168px;
+  padding-top: 63px;
+  padding-left: 24px;
+}
+.work{
+  display: flex;
+  /* position: relative; */
+}
+.work-text{
+  position: absolute;
+  bottom: 0;
+  /* padding: 27px 107px; */
+  color: #FFFFFF;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 27px;
+
+  /* background-color: var(--work-overlay-color); */
+}
+.work-item{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  
+}
+.work-item::before{
+  
+  content: "";
+  width: 100%;
+  height: 70px;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  background-color: var(--work-overlay-color);
+}
+
+/* Backdrop and modal window */
+.backdrop{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  
+    
+  transition: opacity 250ms cubic-bezier(0.4, 0.84, 0.44, 1), visibility 250ms cubic-bezier(0.4, 0.84, 0.44, 1);
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.modal{   
+  position: absolute;
+  width: 528px;
+  height: 581px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  border-radius: 4px;
+  background-color: #fff;
+  
+  
+}
+.modal-button{
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 9px;
+  right: 9px;
+  width: 30px;
+  height: 30px;
+  
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  
+  
+
+}
+.close-icon{
+  width: 11px;
+  height: 11px;
+  fill: #000000;
+}
+.backdrop.is-hidden{
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+
 }
