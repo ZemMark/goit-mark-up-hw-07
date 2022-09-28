@@ -328,7 +328,13 @@ ul.nav-contacts.list>li+li {
   /* outline: 2px solid teal; */
 
 }
-
+/* .nav-links .item::after .current{
+  content: "";
+  border-bottom: 4px solid var(--accent-color);
+  width: 44px;
+  height: 4px;
+  display: block;
+} */
 
 .nav-links .item:not(:last-child) {
   margin-right: 50px;
@@ -349,16 +355,21 @@ ul.nav-contacts.list>li+li {
 }
 
 .nav-links .current {
-  color: var(--accent-color);
-  
-  
-  
+  color: var(--accent-color); 
 }
-.nav-links::after{
+.nav-links .item.current::after{
   content: "";
+  align-items: flex-end;
+  display: flex;
+  width: 100%;
+
+
   border-bottom: 4px solid var(--accent-color);
   border-radius: 2px;
+
+  
 }
+
 
 /* стилізація блоку герой */
 
