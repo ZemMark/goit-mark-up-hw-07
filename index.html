@@ -5,7 +5,7 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebStudio5-Home</title>
+  <title>WebStudio6-Home</title>
   <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
     rel="stylesheet" />
   <link rel="stylesheet"
@@ -333,8 +333,30 @@
         <button class="modal-button" type="button" data-modal-close>
           <svg class="close-icon" ><use href="./images/close-button.svg#close-button"></use></svg>
         </button>
+        <form class="" action="registration">
+          <div class="modal-forms modal-container">
+            <p class="modal-heading">Залиште свої дані, ми вам передзвонимо</p>
+            <label class="modal-label" for="name" autofocus >Ім'я</label>
+            <input class="modal-inputs"  class="modal-inputs" type="name" name="name" id="name" autofocus>
+            <label class="modal-label" for="tel">Телефон</label>
+            <input class="modal-inputs" type="tel" name="tel" id="tel">
+            <label class="modal-label" for="email">Пошта</label>
+            <input class="modal-inputs" type="email" name="email" id="email">
+            <label class="modal-label" for="comment">Коментар</label>
+            <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
+            <div class="modal-container">
+
+              <input type="checkbox" name="checkbox" id="checkbox" value="Погоджуюся з розсилкою та приймаю Умови договору Умови договору" >
+              <label class="checkbox" for="checkbox">Погоджуюся з розсилкою та приймаю <a class="privasy-agreemant" href="">Умови договору</a></label>
+            </div>
+            <div class="button-submit">
+
+              <button class="submit" type="submit">Відправити</button>
+            </div>
+          </div>
+        </form>
       </div>
-    </div>
+    </div> 
   </main>
   <footer class="footer">
     <div class="container multi-block">
@@ -388,6 +410,15 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="footer-form">
+        <p class="form-heading">Підпишіться на розсилку</p>
+        <div class="footer-email-form">
+          <label for="email">
+            <input type="email" name="email" placeholder="Email">
+          </label>
+          <button class="subscribe" type="submit">Підписатися</use> </svg></button>
+        </div>
       </div>
     </div>
   </footer>
