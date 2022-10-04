@@ -330,24 +330,32 @@
     </section>
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
-        <button class="modal-button" type="button" data-modal-close>
+        <button class="button-close" type="button" data-modal-close>
           <svg class="close-icon" ><use href="./images/close-button.svg#close-button"></use></svg>
         </button>
-        <form class="" action="registration">
+        <form class="form-feald" action="registration">
           <div class="modal-forms modal-container">
             <p class="modal-heading">Залиште свої дані, ми вам передзвонимо</p>
-            <label class="modal-label" for="name" autofocus >Ім'я</label>
-            <input class="modal-inputs"  class="modal-inputs" type="name" name="name" id="name" autofocus>
+            <label class="modal-label name" for="name" autofocus>Ім'я</label>
+            <span class="input-icon">
+              <input class="modal-inputs"  class="modal-inputs" type="name" name="name" id="name" autofocus >
+              <svg class="icon-person">
+                <use href="./images/form-icons/symbol-defs.svg#person"></use>
+              </svg>
+            </span>
             <label class="modal-label" for="tel">Телефон</label>
             <input class="modal-inputs" type="tel" name="tel" id="tel">
             <label class="modal-label" for="email">Пошта</label>
             <input class="modal-inputs" type="email" name="email" id="email">
             <label class="modal-label" for="comment">Коментар</label>
             <textarea name="comment" id="comment" cols="30" rows="10"></textarea>
-            <div class="modal-container">
-
-              <input type="checkbox" name="checkbox" id="checkbox" value="Погоджуюся з розсилкою та приймаю Умови договору Умови договору" >
-              <label class="checkbox" for="checkbox">Погоджуюся з розсилкою та приймаю <a class="privasy-agreemant" href="">Умови договору</a></label>
+            <!-- <div class="modal-container">
+              <div class="checkbox-section">
+                <input class="check-input" type="checkbox" name="checkbox" id="checkbox">
+                <span class="check-box"></span>
+              </div> -->
+              
+              <label class="check-label" for="checkbox">Погоджуюся з розсилкою та приймаю <a class="privasy-agreemant" href="">Умови договору</a></label>
             </div>
             <div class="button-submit">
 
@@ -417,7 +425,7 @@
           <label for="email">
             <input type="email" name="email" placeholder="Email">
           </label>
-          <button class="subscribe" type="submit">Підписатися</use> </svg></button>
+          <button class="subscribe" type="submit">Підписатися</button>
         </div>
       </div>
     </div>
