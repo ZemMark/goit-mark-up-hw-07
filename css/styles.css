@@ -1288,6 +1288,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   width: 448px;
   height: 40px;
   margin-bottom: 10px;
+  padding-left: 42px;
 
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
@@ -1316,6 +1317,13 @@ textarea:focus{
 }
 textarea:disabled{
   border-color: var(--accent-color);
+}
+.comment{
+  color: comment;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 
@@ -1393,13 +1401,16 @@ textarea:disabled{
 .input-icon{
   position: relative;
 }
-.icon-person{
+.icon-person,
+.icon-phone,
+.icon-envelope{
   position: absolute;
   width: 12px;
   height: 12px;
   top: 14px;
   left: 15px;
 }
+
 
 /* Checkbox */
 .check-input{
