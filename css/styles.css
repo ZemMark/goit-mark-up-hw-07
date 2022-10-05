@@ -1344,6 +1344,8 @@ textarea:disabled{
 .privasy-agreemant {
   color: var(--accent-color);
   text-decoration: underline;
+
+  margin-left: 8px;
 }
 
 .button-submit .submit {
@@ -1426,6 +1428,14 @@ textarea:disabled{
   display: flex;
   align-items: center;
   justify-content: center;
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.7;
+  
+  letter-spacing: 0.03em;
+  color: #757575;
+  
 }
 
 .checkbox{
