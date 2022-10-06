@@ -1422,7 +1422,7 @@ textarea:disabled{
 } */
 
 
-/* check box try 2 */
+/* check box try 2nd */
 
 .checkbox-label{
   display: flex;
@@ -1448,7 +1448,9 @@ textarea:disabled{
   display: inline-block;
   width: 16px;
   height: 15px;
-  background-image: url("../images/checkbox/empty__checkbox.svg");
+  border: 2px solid #212121;
+  border-radius: 2px;
+  /* background-image: url("../images/checkbox/empty__checkbox.svg"); */
 
   margin-right: 7px;
 }
@@ -1458,6 +1460,7 @@ textarea:disabled{
   background-repeat: no-repeat;
   background-position: center;
   border-radius: 2px;
+  border: transparent;
   /* border: 0.2px solid #FFFFFF; */
 }
 
