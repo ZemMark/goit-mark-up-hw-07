@@ -1205,6 +1205,10 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 }
+.footer-email-form{
+  border-color: var(--accent-color);
+  border: none;
+}
 
 .footer-email-form input:hover,
 .footer-email-form input:focus,
@@ -1438,10 +1442,11 @@ textarea:disabled{
   
 }
 
-.checkbox{
-  -webkit-appearance: none;
-  position: absolute;
-}
+/* .checkbox{ */
+  /* -webkit-appearance: none;
+  position: absolute; */
+
+/* }\ */
 
 .checkbox-icon{
   content: '';
@@ -1459,6 +1464,7 @@ textarea:disabled{
   background-image: url("../images/checkbox/checked.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-origin: border-box;
   border-radius: 2px;
   border: transparent;
   /* border: 0.2px solid #FFFFFF; */
