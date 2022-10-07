@@ -341,7 +341,7 @@
 
             <label class="modal-label name" for="name" autofocus>Ім'я</label>
             <span class="input-icon">
-              <input class="modal-inputs" class="modal-inputs" type="name" name="name" id="name" autofocus>
+              <input class="modal-inputs" class="modal-inputs" type="name" name="name" id="name" autofocus required>
               <svg class="etire-icon icon-person">
                 <use href="./images/form-icons/symbol-defs.svg#person"></use>
               </svg>
@@ -349,7 +349,7 @@
 
             <label class="modal-label" for="tel">Телефон</label>
             <span class="input-icon">
-              <input class="modal-inputs" type="tel" name="tel" id="tel">
+              <input class="modal-inputs" type="tel" name="tel" id="tel" required>
               <svg class="etire-icon icon-phone">
                 <use href="./images/form-icons/symbol-defs.svg#phone"></use>
               </svg>
@@ -372,7 +372,7 @@
                 <span class="check-box"></span>
               </div> -->
             <label class="checkbox-label">
-              <input class="checkbox" type="checkbox" name="checkbox">
+              <input class="checkbox" type="checkbox" name="checkbox" required>
               <span class="checkbox-icon"></span>
               Погоджуюся з розсилкою та приймаю <a class="privasy-agreemant" href=""> Умови договору</a>
             </label>
@@ -438,15 +438,15 @@
           </li>
         </ul>
       </div>
-      <div class="footer-form">
-        <p class="form-heading">Підпишіться на розсилку</p>
+      <form action="email" class="footer-form">
+        <p class="heading">Підпишіться на розсилку</p>
         <div class="footer-email-form">
           <label for="email">
+            <input class="input-email" type="email" name="email" placeholder="Email" required>
           </label>
-          <input class="input-email" type="email" name="email" placeholder="Email">
           <button class="subscribe" type="submit">Підписатися</button>
         </div>
-      </div>
+      </form>
     </div>
   </footer>
   <script src="./js/modal.js"></script>
