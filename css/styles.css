@@ -13,6 +13,9 @@ html {
 *::after {
   box-sizing: inherit;
 }
+button{
+  cursor: pointer;
+}
 
 /* Решта коду */
 :root {
@@ -109,7 +112,7 @@ button {
 
 /* стилізація кнопок на сторінці портфоліо */
 
-.button.primaru {
+.button__primary {
 
   font-family: inherit;
   background-color: var(--button-background);
@@ -129,9 +132,9 @@ button {
   transition: background-color 250ms cubic-bezier(0.4, 0.84, 0.44, 1), color 250ms cubic-bezier(0.4, 0.84, 0.44, 1), box-shadow 250ms cubic-bezier(0.4, 0.84, 0.44, 1);
 }
 
-.button.primaru:hover,
-.button.primaru:active,
-.button.primaru:focus {
+.button__primary:hover,
+.button__primary:active,
+.button__primary:focus {
   background-color: var(--accent-color);
   color: rgba(255, 255, 255, 1);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
@@ -208,7 +211,7 @@ button {
   border-bottom: 1px solid var(--header-bottom-border);
 }
 
-a.logo {
+.header__logo {
   color: var(--second-half-logo);
   padding-top: 24px;
   padding-bottom: 25px;
@@ -221,7 +224,7 @@ a.logo {
 /* .logo:visited{
     color: (33, 33, 33, 1);
 } */
-.logo-link {
+.header__logo--blue {
   color: var(--accent-color);
 }
 
@@ -250,8 +253,7 @@ h6 {
 
 
 /* оформлення шрифра для лого в футурі та хедері */
-.logo,
-.footer-logo {
+.logo{
   display: block;
   font-family: Raleway;
   font-size: 26px;
@@ -264,7 +266,7 @@ h6 {
 }
 
 
-.footer .footer-logo {
+.footer__logo {
   display: block;
   margin-bottom: 20px;
 
@@ -272,7 +274,9 @@ h6 {
 
 
 }
-
+.footer__logo--blue{
+  color: var(--accent-color);
+}
 
 
 
@@ -583,7 +587,7 @@ div.card-content {
 }
 
 /* редагування стилю тексту на сторінці портфоліо */
-.portfolio-link {
+.card__link {
   font-size: 18px;
   color: var(--title-color);
   display: block;
@@ -592,13 +596,13 @@ div.card-content {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover,
-.portfolio-link:focus,
-.portfolio-link:active {
+.card__link:hover,
+.card__link:focus,
+.card__link:active {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio p {
+.card-metha__subtitle {
   font-size: 16px;
   color: var(--primary-text-color);
   line-height: 1.87;
@@ -607,7 +611,7 @@ div.card-content {
   letter-spacing: 0.03em;
 }
 
-.text-title {
+.card-metha__titel{
   color: var(--title-color);
   font-weight: 700;
   font-size: 18px;
@@ -818,7 +822,7 @@ footer {
   padding-bottom: 60px;
 }
 
-.card-text {
+.card-metha {
 
 
   border: 1px solid var(--portfolio-card-border-color);
@@ -1082,7 +1086,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.portfolio-link:hover .overlay {
+.card__link:hover .overlay {
   transform: translateY(0);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1203,6 +1207,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
+  outline: none;
 }
 .footer-email-form{
   border-color: var(--accent-color);
