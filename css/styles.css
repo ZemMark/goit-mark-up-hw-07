@@ -241,10 +241,7 @@ h6 {
   padding: 0;
 }
 
-/* .nav-links .link{
-  padding-top: 32px;
-  margin-bottom: 32px;
-} */
+
 .hero>h1 {
   color: #fff;
   width: 696px;
@@ -327,7 +324,7 @@ ul.nav-contacts.list>li+li {
 /*-ПОСИЛАННЯ в хедері 
 -стилізація блоку з головною навігацією на головній 
 сторінці в хедері*/
-.nav-links .link {
+.nav-links__link {
   display: block;
 
   font-weight: 500;
@@ -342,6 +339,8 @@ ul.nav-contacts.list>li+li {
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+  text-decoration: none;
 }
 
 /* .nav-links .item::after .current{
@@ -352,7 +351,7 @@ ul.nav-contacts.list>li+li {
   display: block;
 } */
 
-.nav-links .item:not(:last-child) {
+.nav-links__item:not(:last-child) {
   margin-right: 50px;
 
 }
@@ -364,17 +363,17 @@ ul.nav-contacts.list>li+li {
 
 
 
-.nav-links .link:hover,
-.nav-links .link:focus,
-.nav-links .link:active {
+.nav-links__link:hover,
+.nav-links__link:focus,
+.nav-links__link:active {
   color: var(--accent-color);
 }
 
-.nav-links .current {
+/* .nav-links .current {
   color: var(--accent-color);
-}
+} */
 
-.nav-links .item.current::after {
+.nav-links__item--current::after {
   content: "";
   align-items: flex-end;
   display: flex;
