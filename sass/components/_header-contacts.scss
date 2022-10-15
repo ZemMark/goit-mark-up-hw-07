@@ -1,0 +1,24 @@
+.header-contacts__contact {
+    display: block;
+
+    font-weight: 500;
+    padding-bottom: 32px;
+    padding-top: 32px;
+
+    color: var(--primary-text-color);
+    line-height: 1.17;
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus,
+    &:active{
+        color: var(--accent-color);
+    }
+}

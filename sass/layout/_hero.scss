@@ -1,0 +1,46 @@
+.hero>h1 {
+    color: #fff;
+    width: 696px;
+    text-transform: uppercase;
+}
+.hero .hero-title {
+    letter-spacing: 0.06em;
+    margin: 0 auto;
+
+    color: #fff;
+    width: 696px;
+    font-weight: 900;
+    font-size: 44px;
+    margin-bottom: 30px;
+    line-height: 1.36;
+    text-transform: uppercase;
+}
+.hero {
+    text-align: center;
+    /* outline: 5px solid red; */
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: linear-gradient(to top, var(--overlay-bgc), var(--overlay-bgc)), url("../images/overlay.jpg");
+    max-width: 1600px;
+    height: 600px;
+    margin: 0 auto;
+    padding: 200px 0;
+    background-color: var(--footer-hero-bgc)
+}
+.hero__button--secondary {
+    padding: 10px 32px;
+
+    background-color: var(--accent-color);
+    color: #ffffff;
+    line-height: 1.87;
+    font-weight: 700;
+    min-width: 216px;
+    text-align: center;
+    letter-spacing: 0.06em;
+    /* position: absolute;
+    width: 216px;
+    height: 50px;
+    left: 692px;
+    top: 430px; */
+}

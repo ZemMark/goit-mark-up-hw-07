@@ -167,7 +167,7 @@ button {
 }
 
 /* кнопка "замовити послугу" */
-.button.secondary {
+.hero__button--secondary {
   padding: 10px 32px;
 
   background-color: var(--accent-color);
@@ -279,14 +279,14 @@ h6 {
 
 
 /* оформлення */
-ul.nav-contacts.list {
+ul.header-contacts.list {
   display: flex;
   padding-bottom: 0px;
   margin-left: auto;
 
 }
 
-ul.nav-contacts.list>li+li {
+ul.header-contacts.list>li+li {
   margin-left: 50px;
 }
 
@@ -296,7 +296,7 @@ ul.nav-contacts.list>li+li {
 
 
 
-.nav-contacts .contact {
+.header-contacts__contact {
   display: block;
 
   font-weight: 500;
@@ -315,9 +315,9 @@ ul.nav-contacts.list>li+li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contact:hover,
-.contact:focus,
-.contact:active {
+.header-contacts__contact:hover,
+.header-contacts__contact:focus,
+.header-contacts__contact:active {
   color: var(--accent-color);
 }
 
@@ -343,22 +343,11 @@ ul.nav-contacts.list>li+li {
   text-decoration: none;
 }
 
-/* .nav-links .item::after .current{
-  content: "";
-  border-bottom: 4px solid var(--accent-color);
-  width: 44px;
-  height: 4px;
-  display: block;
-} */
+
 
 .nav-links__item:not(:last-child) {
   margin-right: 50px;
 
-}
-
-.nav-links.list {
-  padding-bottom: 0px;
-  margin-right: auto;
 }
 
 
@@ -368,10 +357,6 @@ ul.nav-contacts.list>li+li {
 .nav-links__link:active {
   color: var(--accent-color);
 }
-
-/* .nav-links .current {
-  color: var(--accent-color);
-} */
 
 .nav-links__item--current::after {
   content: "";
@@ -425,6 +410,10 @@ ul.nav-contacts.list>li+li {
   margin-bottom: 10px;
 
 }
+.features__pictures-list{
+  display: flex;
+}
+
 
 /* фон hero footer */
 .hero,
@@ -660,11 +649,11 @@ address {
   padding-bottom: 94px;
 } */
 
-.features .item {
+.pictures-list__item{
   width: 270px;
 }
 
-.features .item::before {
+.pictures-list__item::before {
   content: "";
   display: block;
   height: 120px;
@@ -676,27 +665,27 @@ address {
   background-size: 70px;
 }
 
-.features .weather-radar::before {
+.weather-radar::before {
 
   background-image: url(../images/features/antenna.svg);
 }
 
-.features .clock::before {
+.clock::before {
   background-image: url(../images/features/clock.svg);
 }
 
-.features .laptop::before {
+.laptop::before {
   background-image: url(../images/features/diagram.svg);
 }
 
-.features .spaceman::before {
+.spaceman::before {
   background-image: url(../images/features/astronaut.svg);
 }
 
 
 
 
-.features .item:not(:last-child) {
+.pictures-list__item:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -719,16 +708,7 @@ ul.list .item-worker:not(:last-child) {
   margin-right: 30px;
 }
 
-/* .nav-contacts.list{
-  display: flex;
-  justify-content: end;
-  align-items: flex-start;
-} */
-/* .nav-links.list{
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-} */
+
 
 /* відступи в картинках блоку чим займаємося */
 .work-item:not(:last-child) {
@@ -740,12 +720,12 @@ ul.list .item-worker:not(:last-child) {
   width: 370px;
 }
 
-.nav-container .nav-links.list {
+/* .nav-container .nav-links.list {
   display: block;
   flex-direction: row;
   justify-content: center;
 
-}
+} */
 
 /* кнопки фільтри на портфоліо */
 .buttons.list>.item:not(:last-child) {
@@ -788,11 +768,12 @@ ul.list .item-worker:not(:last-child) {
 /* ul.portfolio>.item:not(:last-child){
   margin-right: 30px;
 } */
-.nav-links.list {
+.nav-links {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  /* outline: 2px solid red; */
+  padding-bottom: 0px;
+  margin-right: auto;
 
 }
 
@@ -805,9 +786,9 @@ ul.list .item-worker:not(:last-child) {
   padding-bottom: 94px;
 }
 
-.container .section {
+/* .container .section {
   padding-bottom: 94px;
-}
+} */
 
 /* -прибрати падінг кнопок
 -продивитися де ще можна прибрати
