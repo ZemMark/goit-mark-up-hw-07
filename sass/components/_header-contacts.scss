@@ -1,3 +1,13 @@
+.header-contacts {
+    display: flex;
+    padding-bottom: 0px;
+    margin-left: auto;
+
+}
+
+.header-contacts > li+li {
+    margin-left: 50px;
+}
 .header-contacts__contact {
     display: block;
 
@@ -5,7 +15,7 @@
     padding-bottom: 32px;
     padding-top: 32px;
 
-    color: var(--primary-text-color);
+    color: $primary-text-color;
     line-height: 1.17;
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -19,6 +29,18 @@
     &:hover,
     &:focus,
     &:active{
-        color: var(--accent-color);
+        color: $accent-color;
     }
+}
+
+.header-contacts__mini-icon {
+    width: 16px;
+    height: 12px;
+    fill: currentColor;
+    margin-right: 10px;
+}
+
+.header-contacts__mini-icon--phone {
+    width: 12px;
+    height: 16px;
 }

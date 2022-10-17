@@ -21,23 +21,26 @@
 
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: linear-gradient(to top, var(--overlay-bgc), var(--overlay-bgc)), url("../images/overlay.jpg");
+    background-image: linear-gradient(to top, $overlay-bgc, $overlay-bgc), url("../images/overlay.jpg");
     max-width: 1600px;
     height: 600px;
     margin: 0 auto;
     padding: 200px 0;
-    background-color: var(--footer-hero-bgc)
+    background-color: $footer-hero-bgc;
 }
 .hero__button--secondary {
     padding: 10px 32px;
 
-    background-color: var(--accent-color);
+
+    background-color: $accent-color;
     color: #ffffff;
     line-height: 1.87;
     font-weight: 700;
     min-width: 216px;
     text-align: center;
     letter-spacing: 0.06em;
+    border: $accent-color;
+    border-radius: 4px;
     /* position: absolute;
     width: 216px;
     height: 50px;

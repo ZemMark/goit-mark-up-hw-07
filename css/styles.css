@@ -87,7 +87,7 @@ button {
 
 
 /* параграфи в файлі index.html */
-.features .text {
+.features__subtitle {
   color: var(--primary-text-color);
   font-weight: 400;
   font-size: 14px;
@@ -403,7 +403,7 @@ ul.header-contacts.list>li+li {
 }
 
 /* заголовки блоку "переваги" головної сторінки  */
-.features-title {
+.features__title {
   font-size: 14px;
   line-height: 1.14;
   /* padding-top: 92px; */
@@ -422,7 +422,7 @@ ul.header-contacts.list>li+li {
 }
 
 /* посилання в футері */
-.map {
+.address-links__map {
   color: #ffffff;
   font-size: 14px;
   line-height: 1.7;
@@ -433,15 +433,15 @@ ul.header-contacts.list>li+li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.map:hover,
-.map:focus,
-.map:active {
+.address-links__map:hover,
+.address-links__map:focus,
+.address-links__map:active {
   color: var(--accent-color);
 }
 
 
 
-.address-links .contact {
+.address-links__contact {
 
   color: rgba(255, 255, 255, 0.6);
   font-size: 14px;
@@ -475,7 +475,7 @@ ul.header-contacts.list>li+li {
 
 /* оформлення фону для секції team початкової сторінки */
 
-.team.bgc {
+.team {
   background-color: var(--bgc-secondary);
 
 
@@ -499,12 +499,12 @@ ul.header-contacts.list>li+li {
   /* text-align: center; */
 }
 
-div.card-content {
+.team-card {
   padding: 30px;
 
 }
 
-.team .card-job {
+.team-card__job {
 
   color: var(--primary-text-color);
   font-size: 16px;
@@ -516,7 +516,7 @@ div.card-content {
 
 
 
-.team .card-heading {
+.team-card__heading{
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
@@ -526,7 +526,7 @@ div.card-content {
   color: var(--title-color);
 }
 
-.team .item-worker {
+.team-members__worker {
   background: #FFFFFF;
   /* material shadow v1 */
   min-width: 270px;
@@ -621,10 +621,6 @@ body ul {
   margin-left: 0;
 }
 
-address {
-  font-style: normal;
-  display: flex;
-}
 
 
 
@@ -694,7 +690,7 @@ address {
 }
 
 /* індекс хтмл наша команда */
-ul.list.function-marg {
+.team-members{
   display: flex;
   margin: 0;
   padding: 0;
@@ -704,20 +700,21 @@ ul.list.function-marg {
 
 }
 
-ul.list .item-worker:not(:last-child) {
+.team-members__worker:not(:last-child) {
   margin-right: 30px;
 }
 
 
 
 /* відступи в картинках блоку чим займаємося */
-.work-item:not(:last-child) {
+.work__item:not(:last-child) {
   margin-right: 30px;
 
 }
 
-.work-item {
+.work__item {
   width: 370px;
+  position: relative;
 }
 
 /* .nav-container .nav-links.list {
@@ -823,7 +820,7 @@ footer {
   padding-top: 94px;
 }
 
-.section-features {
+.section-work {
   padding-top: 0;
   padding-bottom: 94px;
 }
@@ -888,7 +885,7 @@ footer {
   max-width: 210px;
 }
 
-.right-conrainer {
+.footer-socials__container {
   margin-left: 70px;
 }
 .footer-form{
@@ -906,20 +903,20 @@ footer {
 
 
 
-.team-socials>li+li {
+.card-button>li+li {
   padding-left: 10px;
 
 }
 
 
-.team-socials {
+.card-button {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 16px;
 }
 
-.social-button {
+.card-button__link {
   border: none;
   width: 44px;
   height: 44px;
@@ -935,15 +932,15 @@ footer {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.icon-team {
+.card-button__icon{
   width: 20px;
   height: 20px;
   fill: currentColor
 }
 
-.social-button:hover,
-.social-button:focus,
-.social-button:active {
+.card-button__link:hover,
+.card-button__link:focus,
+.card-button__link:active {
   background-color: var(--accent-color);
   color: #fff;
 }
@@ -964,7 +961,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 
 }
 
-.footer-button {
+.footer-social__button {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -997,14 +994,14 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 }
 
 
-.mini-icon {
+.header-contacts__mini-icon {
   width: 16px;
   height: 12px;
   fill: currentColor;
   margin-right: 10px;
 }
 
-.mini-icon.phone {
+.header-contacts__mini-icon--phone {
   width: 12px;
   height: 16px;
 }
@@ -1015,7 +1012,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 
 }
 
-.client {
+.clients__link {
   display: flex;
   justify-content: center;
 
@@ -1032,9 +1029,9 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 
 }
 
-.client:hover,
-.client:focus,
-.select:active {
+.clients__link:hover,
+.clients__link:focus,
+.selects__link:active {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -1043,7 +1040,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   margin-right: 30px;
 }
 
-.client-image {
+.clients__image {
   color: currentColor;
   width: 170px;
   height: 120px;
@@ -1086,7 +1083,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   display: flex;
 }
 
-.work-text {
+.work__text {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -1102,10 +1099,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   background-color: var(--work-overlay-color);
 }
 
-.work-item {
-  position: relative;
 
-}
 
 /* Backdrop and modal window */
 .backdrop {
@@ -1134,7 +1128,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 
 }
 
-.button-close{
+.modal__button-close{
   position: absolute;
   display: flex;
   align-items: center;
@@ -1153,16 +1147,16 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 
 }
 
-.close-icon {
+.modal__close-icon {
   width: 11px;
   height: 11px;
   fill: #000000;
   transition: fill 250ms cubic-bezier(0.4, 0.84, 0.44, 1);
 
 }
-.button-close:hover .close-icon,
-.button-close:focus .close-icon,
-.button-close:active .close-icon{
+.modal__button-close:hover .modal__close-icon,
+.modal__button-close:focus .modal__close-icon,
+.modal__button-close:active .modal__close-icon{
   fill: var(--accent-color);
   border-color: rgba(0, 0, 0, 0.1);
 }
@@ -1244,13 +1238,13 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
 }
 
 
-.modal-forms {
+.form-feald {
   display: flex;
   flex-direction: column;
   margin: 40px 40px;
 }
 
-.modal-label {
+.modal__label {
   color: #757575;
   font-weight: 400;
   font-size: 12px;
@@ -1260,7 +1254,7 @@ fill="#afb1b8" style="fill:var(--color1, #afb1b8)
   margin-bottom: 4px;
 }
 
-.modal-heading {
+.modal__heading {
   font-weight: 700;
   font-size: 20px;
   line-height: 23px;
@@ -1307,7 +1301,7 @@ textarea:focus{
 textarea:disabled{
   border-color: var(--accent-color);
 }
-.comment{
+.modal__comment{
   color: comment;
   font-weight: 400;
   font-size: 12px;
@@ -1362,20 +1356,20 @@ textarea:disabled{
   justify-content: center;
   position: relative;
 }
-.modal .button-submit{
+.modal__button-submit{
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
 }
-.modal .modal-inputs:hover,
-.modal .modal-inputs:active,
-.modal .modal-inputs:focus{
+.modal-inputs:hover,
+.modal-inputs:active,
+.modal-inputs:focus{
   border-color: var(--accent-color);
 }
 
 
-
+/* 
 .form-feald .name::placeholder{
   content: "";
   position: absolute;
@@ -1385,8 +1379,8 @@ textarea:disabled{
 .form-feald input.name::before{
   content: '';
   
-}
-.input-icon{
+} */
+.modal__input-icon{
   position: relative;
   margin-bottom: 10px;
 }
@@ -1400,10 +1394,10 @@ textarea:disabled{
   left: 15px;
 }
 
-.modal-inputs:focus + .etire-icon{
+.modal-inputs:focus + .modal-inputs__entire-icon{
   fill: var(--accent-color);
 }
-.etire-icon{
+.modal-inputs__entire-icon{
   width: 12px;
   height: 12px;
   transition: fill 250ms cubic-bezier(0.4, 0.84, 0.44, 1);
@@ -1417,7 +1411,7 @@ textarea:disabled{
 
 /* check box try 2nd */
 
-.checkbox-label{
+.modal__checkbox-label{
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1431,7 +1425,7 @@ textarea:disabled{
   
 }
 
-.checkbox{
+.modal__checkbox{
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -1445,7 +1439,7 @@ textarea:disabled{
   
 }
 
-.checkbox-icon{
+.modal__checkbox-icon{
   content: '';
   display: inline-block;
   width: 16px;

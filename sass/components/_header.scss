@@ -1,6 +1,17 @@
+.logo {
+    display: block;
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-align: left;
+    text-decoration: none;
+    
+}
 .header-portfolio {
-    border-bottom: var(--header-bottom-border);
-    border-bottom: 1px solid var(--header-bottom-border);
+    // border-bottom: $header-bottom-border;
+    border-bottom: 1px solid $header-bottom-border;
 }
 
 .header__logo {
@@ -9,8 +20,11 @@
     padding-bottom: 25px;
     margin-right: 93px;
 
+    &--blue{
+        color: $accent-color;
+    }
+
 }
 
-.header__logo--blue {
-    color: var(--accent-color);
-}
+
+
